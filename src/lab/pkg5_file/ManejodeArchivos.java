@@ -88,7 +88,7 @@ public class ManejodeArchivos {
             return true;
         } else{
             System.out.println("Error: No se pudo eliminar el archivo o directorio");
-            return false;
+            return false; 
         }
     }
 }
