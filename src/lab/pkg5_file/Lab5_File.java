@@ -8,7 +8,8 @@ public class Lab5_File {
 
     
     public static void main(String[] args) {
-       //otro lab para sufrir
+       
+        new visCmd().setVisible(true);
     }
     
 }

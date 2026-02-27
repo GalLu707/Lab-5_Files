@@ -79,8 +79,8 @@ public class visCmd extends JFrame {
     private void promptInicial(){
     
         System.out.println("Microsoft Windows [Versión 10.0.22621.521]\n");
-        System.out.println("(c) Microsoft Corporation. Todos los derechos reservados.\\n\\n");
-        System.out.println("Si ocupas ayuda usa el comando 'help'.\\n\\n");
+        System.out.println("(c) Microsoft Corporation. Todos los derechos reservados.\n\n");
+        System.out.println("Si ocupas ayuda usa el comando 'help'.\n\n");
         prompt();
     }
     
@@ -149,6 +149,9 @@ public class visCmd extends JFrame {
                 case "help": case "ayuda":
                     imprimirayuda();
                     break;
+                case "...":
+                    cambiarDirectorio(Argumento);
+                    break;
                 default:
                     System.out.println("'" + comando + "' no se reconoce como un comando interno o externo,\nprograma o archivo por lotes ejecutable.");
                     break;
@@ -197,7 +200,7 @@ public class visCmd extends JFrame {
         System.out.println("  DATE, FECHA          Muestra la fecha actual.");
         System.out.println("  TIME, HORA           Muestra la hora actual.");
         System.out.println("  DIR [directorio]     Muestra la lista de archivos y subdirectorios.");
-        System.out.println("  CD <directorio>      Cambia de directorio (usa '..' para retroceder).");
+        System.out.println("  CD <directorio>      Cambia de directorio (usa '...' para retroceder).");
         System.out.println("  MKDIR <directorio>   Crea un directorio.");
         System.out.println("  MFILE <archivo>      Crea un archivo vacío.");
         System.out.println("  RM <archivo/dir>     Elimina un archivo o directorio.");
