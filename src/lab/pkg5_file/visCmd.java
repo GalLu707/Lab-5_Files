@@ -110,9 +110,6 @@ public class visCmd extends JFrame {
                     area.setText("");
                     prompt();
                     return;
-                case "echo":
-                    System.out.println(Argumento);
-                    break;
                 case "date": case "fecha":
                     System.out.println("La fecha actual es: " + LocalDate.now().format(DateTimeFormatter.ofPattern("dd/MM/yyyy")));
                     break;
