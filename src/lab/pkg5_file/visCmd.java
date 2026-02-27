@@ -150,7 +150,7 @@ public class visCmd extends JFrame {
                     imprimirayuda();
                     break;
                 case "...":
-                    cambiarDirectorio(Argumento);
+                    cambiarDirectorio("...");
                     break;
                 default:
                     System.out.println("'" + comando + "' no se reconoce como un comando interno o externo,\nprograma o archivo por lotes ejecutable.");
@@ -178,6 +178,11 @@ public class visCmd extends JFrame {
         File nuevaRuta;
         if(ruta.equals("...")){
             nuevaRuta = rutaActual.getParentFile();
+            
+            if(nuevaRuta == null){
+                System.out.println("Ya te encuentras en el directorio raiz");
+                return;
+            }
             
         }else{
             nuevaRuta = new File(ruta);
