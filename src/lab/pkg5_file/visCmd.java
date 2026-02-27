@@ -12,6 +12,7 @@ import java.io.File;
 import java.io.IOException;
 import java.io.PrintStream;
 import java.time.LocalDate;
+import java.io.OutputStream;
 import java.time.LocalTime;
 import java.time.format.DateTimeFormatter;
 import javax.swing.JFrame;
@@ -204,6 +205,16 @@ public class visCmd extends JFrame {
         System.out.println("  RD <archivo>         Muestra el contenido de un archivo de texto.");
         System.out.println("  EXIT, SALIR          Cierra la consola.");
     }
-    
+    public static class CustomOutputStream extends OutputStream{
+        private JTextArea TextArea;
+        public CustomOutputStream(JTextArea textArea) { this.TextArea = textArea; }
+
+       
+        @Override
+        public void write(int b) throws IOException {
+            TextArea.append(String.valueOf((char) b));
+            TextArea.setCaretPosition(TextArea.getDocument().getLength());
+        }
+    }
     
 }
