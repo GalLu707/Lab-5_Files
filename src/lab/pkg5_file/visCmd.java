@@ -77,7 +77,7 @@ public class visCmd extends JFrame {
     
     private void promptInicial(){
     
-        System.out.println("Microsoft Windows\n");
+        System.out.println("Microsoft Windows [Versión 10.0.22621.521]\n");
         System.out.println("(c) Microsoft Corporation. Todos los derechos reservados.\\n\\n");
         System.out.println("Si ocupas ayuda usa el comando 'help'.\\n\\n");
         prompt();
